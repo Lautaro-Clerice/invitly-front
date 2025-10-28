@@ -58,7 +58,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="md:flex items-center gap-3">
             <LanguageToggle />
           </div>
 
@@ -73,7 +73,7 @@ export const Navbar = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col gap-6 mt-8">
+              <div className="flex flex-col gap-6 mt-8 ml-4">
                 {navLinks.map((link) => (
                   <Link
                     prefetch
