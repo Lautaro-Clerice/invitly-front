@@ -63,7 +63,7 @@ export function InvitationsList() {
                 bottom-0 justify-center py-3 opacity-100 bg-transparent"
             >
               <a
-                href="https://invitation-front-chi.vercel.app/evento/lautaroydafne"
+                href="https://invitation-front-chi.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shadow-lg"
