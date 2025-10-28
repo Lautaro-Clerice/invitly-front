@@ -42,6 +42,7 @@ export default function ContactForm() {
       await postNewInquiry(data);
       toast.success(t("form.success"), {
         description: t("form.successDescription"),
+        position: "top-right",
       });
       form.reset();
     } catch (error) {
@@ -164,9 +165,12 @@ export default function ContactForm() {
         />
         <Button
           type="submit"
-          className="w-full shadow-elegant"
+          className={`w-full shadow-elegant${
+            form.formState.isSubmitting ? " opacity-50" : ""
+          }`}
           size="lg"
           aria-label={t("form.submit")}
+          disabled={form.formState.isSubmitting}
         >
           <Send className="h-4 w-4 mr-2" aria-hidden="true" />
           {t("form.submit")}
