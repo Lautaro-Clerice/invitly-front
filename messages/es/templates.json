@@ -1,0 +1,28 @@
+{
+  "Templates": {
+    "featuredInvitations": "Invitaciones destacadas",
+    "featuredDescription": "Explora nuestras invitaciones más populares con animaciones, música, RSVP y mucho más. Todas 100% personalizables.",
+    "viewDemo": "Ver demo",
+    "get": "Obtener",
+    "viewAll": "Ver todas las invitaciones",
+    "filterValue": "Filtrar por categoría",
+    "error": "Error al cargar las invitaciones",
+    "noResults": "No se encontraron invitaciones con los filtros seleccionados",
+    "retry": "Intentar de nuevo",
+    "tags": {
+      "Interactiva": "Interactiva",
+      "Con música": "Con música",
+      "RSVP": "RSVP",
+      "Animada": "Animada",
+      "Con contador": "Con contador",
+      "Galería": "Galería",
+      "Con juegos": "Con juegos",
+      "Confetti": "Confetti",
+      "Contador": "Contador",
+      "Profesional": "Profesional",
+      "Calendario": "Calendario",
+      "Video": "Video",
+      "Lista regalos": "Lista regalos"
+    }
+  }
+}

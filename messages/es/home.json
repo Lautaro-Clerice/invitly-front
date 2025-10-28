@@ -1,0 +1,68 @@
+{
+  "Hero": {
+    "badge": "Invitaciones únicas y personalizadas",
+    "title": "Celebra tus momentos",
+    "subtitle": "Crea invitaciones digitales elegantes e interactivas que sorprenderán a tus invitados. Diseño personalizado, animaciones únicas y gestión de RSVP en una sola plataforma.",
+    "button": {
+      "categories": "Ver categorías",
+      "contact": "Contactanos"
+    },
+    "stats": {
+      "designs": "Diseños",
+      "clients": "Clientes",
+      "satisfaction": "Satisfacción"
+    },
+    "words": ["especiales", "únicos"],
+    "imageAlt": "Decoración elegante de evento, ejemplo de invitación digital personalizada",
+    "whatsappMessage": "Hola! 👋 Me das una mano para hacer mi invitacion digital?"
+  },
+  "Categories": {
+    "title": "Categorías que trabajamos",
+    "description": "Diseños únicos para cada tipo de celebración. Elige tu categoría y personaliza cada detalle para crear la invitación perfecta.",
+    "loading": "Cargando",
+    "viewDesigns": "Ver diseños"
+  },
+  "Features": {
+    "badge": "Todo incluido",
+    "title": "¿Qué incluye tu invitación?",
+    "description": "Cada invitación viene con todas las herramientas que necesitas para crear una experiencia memorable para tus invitados",
+    "features": [
+      {
+        "title": "Diseño Personalizado",
+        "description": "Cada invitación es única y diseñada especialmente para tu evento"
+      },
+      {
+        "title": "100% Digital",
+        "description": "Invitaciones interactivas que se ven perfectas en cualquier dispositivo"
+      },
+      {
+        "title": "Gestión de RSVP",
+        "description": "Controla confirmaciones y gestiona tu lista de invitados automáticamente"
+      },
+      {
+        "title": "Recordatorios",
+        "description": "Envío automático de recordatorios para que nadie se olvide de tu evento"
+      },
+      {
+        "title": "Galería Interactiva",
+        "description": "Incluye fotos y videos que cobran vida con animaciones elegantes"
+      },
+      {
+        "title": "Música de Fondo",
+        "description": "Añade la banda sonora perfecta para crear el ambiente ideal"
+      }
+    ],
+    "benefitsTitle": "Y mucho más incluido",
+    "benefitsDescription": "Nuestro servicio integral asegura que tengas todo lo necesario para crear la invitación perfecta sin preocupaciones adicionales.",
+    "benefits": [
+      "Entrega inmediata por WhatsApp o email",
+      "Sin límite de invitados",
+      "Actualizaciones en tiempo real",
+      "Compatible con todos los dispositivos",
+      "Estadísticas detalladas de apertura",
+      "Soporte técnico incluido"
+    ],
+    "experienceTitle": "Experiencia Completa",
+    "experienceDescription": "Todo lo que necesitas para crear momentos inolvidables"
+  }
+}

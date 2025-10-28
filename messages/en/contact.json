@@ -1,0 +1,50 @@
+{
+  "Contact": {
+    "form": {
+      "errors": {
+        "nameMin": "Name must be at least 2 characters",
+        "nameMax": "Name cannot exceed 100 characters",
+        "emailInvalid": "Invalid email",
+        "emailMax": "Email cannot exceed 255 characters",
+        "eventType": "Select an event type",
+        "messageMin": "Message must be at least 10 characters",
+        "messageMax": "Message cannot exceed 1000 characters",
+        "passwordMin": "Password must be at least 6 characters",
+        "passwordMax": "Password cannot exceed 100 characters",
+        "passwordsMatch": "Passwords do not match",
+        "phoneInvalid": "Invalid phone format",
+        "bioMax": "Bio cannot exceed 500 characters"
+      }
+    },
+    "title": "Contact us",
+    "subtitle": "Do you have any questions? Feel free to ask us. Our goal is to help you create the perfect invitation for your event.",
+    "contactInfo": "Contact information",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "instagram": "Instagram",
+    "hoursTitle": "Business hours",
+    "hours": "Monday to Friday: 9:00am - 6:00pm\nSaturdays: 10:00am - 2:00pm",
+    "responseTime": "Average response in less than 24 hours",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "eventType": "Event type",
+      "eventTypePlaceholder": "Select an event type",
+      "eventTypes": {
+        "boda": "Wedding",
+        "quince": "15th Birthday",
+        "babyshower": "Baby Shower",
+        "cumpleanos": "Birthday",
+        "corporativo": "Corporate",
+        "otro": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your event...",
+      "submit": "Send message",
+      "success": "Message sent!",
+      "successDescription": "We will contact you soon."
+    }
+  }
+}

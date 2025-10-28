@@ -1,0 +1,68 @@
+{
+  "Hero": {
+    "badge": "Unique and personalized invitations",
+    "title": "Celebrate your moments",
+    "subtitle": "Create elegant and interactive digital invitations that will surprise your guests. Personalized design, unique animations, and RSVP management in one platform.",
+    "button": {
+      "categories": "See categories",
+      "contact": "Contact us"
+    },
+    "stats": {
+      "designs": "Designs",
+      "clients": "Clients",
+      "satisfaction": "Satisfaction"
+    },
+    "words": ["special", "unique"],
+    "imageAlt": "Elegant event decoration, example of personalized digital invitation",
+    "whatsappMessage": "Hi! 👋 Can you help me make my digital invitation?"
+  },
+  "Categories": {
+    "title": "Categories we work with",
+    "description": "Unique designs for every type of celebration. Choose your category and customize every detail to create the perfect invitation.",
+    "loading": "Loading",
+    "viewDesigns": "View designs"
+  },
+  "Features": {
+    "badge": "All included",
+    "title": "What does your invitation include?",
+    "description": "Each invitation comes with all the tools you need to create a memorable experience for your guests",
+    "features": [
+      {
+        "title": "Personalized Design",
+        "description": "Each invitation is unique and designed especially for your event"
+      },
+      {
+        "title": "100% Digital",
+        "description": "Interactive invitations that look perfect on any device"
+      },
+      {
+        "title": "RSVP Management",
+        "description": "Track confirmations and manage your guest list automatically"
+      },
+      {
+        "title": "Reminders",
+        "description": "Automatic reminders so no one forgets your event"
+      },
+      {
+        "title": "Interactive Gallery",
+        "description": "Include photos and videos that come alive with elegant animations"
+      },
+      {
+        "title": "Background Music",
+        "description": "Add the perfect soundtrack to set the ideal mood"
+      }
+    ],
+    "benefitsTitle": "And much more included",
+    "benefitsDescription": "Our comprehensive service ensures you have everything you need to create the perfect invitation without extra worries.",
+    "benefits": [
+      "Instant delivery via WhatsApp or email",
+      "Unlimited guests",
+      "Real-time updates",
+      "Compatible with all devices",
+      "Detailed open statistics",
+      "Technical support included"
+    ],
+    "experienceTitle": "Complete Experience",
+    "experienceDescription": "Everything you need to create unforgettable moments"
+  }
+}

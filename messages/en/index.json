@@ -1,0 +1,20 @@
+{
+  "Navbar": {
+    "inicio": "Home",
+    "invitaciones": "Invitations",
+    "contacto": "Contact",
+    "brand": "Invitly"
+  },
+  "Footer": {
+    "description": "We create unique and elegant digital invitations for your most special moments. Personalized design with cutting-edge technology.",
+    "navigation": "Navigation",
+    "home": "Home",
+    "invitations": "Invitations",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "copyright": "© 2025 Invitly. All rights reserved."
+  },
+  "WhatsappHelp": {
+    "helpButton": "Need help? Talk to us"
+  }
+}
