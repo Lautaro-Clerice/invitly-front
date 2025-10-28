@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { ErrorState } from "@/components/shared/states/ErrorState";
 import { EmptyState } from "@/components/shared/states/EmptyState";
+import { openWhatsApp } from "@/utils/openWhatsapp";
 
 export function InvitationsList() {
   const t = useTranslations("Templates");
@@ -60,7 +61,16 @@ export function InvitationsList() {
               <Button variant="secondary" size="sm" className="shadow-lg">
                 {t("viewDemo")}
               </Button>
-              <Button variant="default" size="sm" className="shadow-lg">
+              <Button
+                variant="default"
+                size="sm"
+                className="shadow-lg"
+                onClick={() =>
+                  openWhatsApp(
+                    t("getMessage", { name: invitation.display_name })
+                  )
+                }
+              >
                 {t("get")}
               </Button>
             </div>

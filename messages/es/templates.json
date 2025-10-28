@@ -23,6 +23,7 @@
       "Calendario": "Calendario",
       "Video": "Video",
       "Lista regalos": "Lista regalos"
-    }
+    },
+    "getMessage": "Hola, quiero obtener esta invitación: {name}"
   }
 }
