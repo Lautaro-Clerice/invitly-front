@@ -62,9 +62,16 @@ export function InvitationsList() {
                 md:inset-0 md:bg-black/60 md:backdrop-blur-sm md:items-center md:justify-center md:opacity-0 md:group-hover:opacity-100
                 bottom-0 justify-center py-3 opacity-100 bg-transparent"
             >
-              <Button variant="secondary" size="sm" className="shadow-lg">
-                {t("viewDemo")}
-              </Button>
+              <a
+                href="https://invitation-front-chi.vercel.app/evento/lautaroydafne"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shadow-lg"
+              >
+                <Button variant="secondary" size="sm" className="w-full">
+                  {t("viewDemo")}
+                </Button>
+              </a>
               <Button
                 variant="default"
                 size="sm"
