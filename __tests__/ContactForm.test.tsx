@@ -84,6 +84,7 @@ describe("ContactForm", () => {
     await waitFor(() => {
       expect(mockToast.success).toHaveBeenCalledWith("¡Mensaje enviado!", {
         description: "Te responderemos pronto",
+        position: "top-right",
       });
     });
 
