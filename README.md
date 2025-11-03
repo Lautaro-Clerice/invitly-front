@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Invitly - Plataforma de Invitaciones Digitales
 
-## Getting Started
+Aplicación web para explorar y solicitar invitaciones digitales personalizadas.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16.0.0-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-38bdf8)
+
+## 🚀 Stack Técnico
+
+- **Framework:** Next.js 16.0.0 (App Router) + React 19.2.0
+- **Language:** TypeScript 5
+- **Styling:** Tailwind CSS v4 + shadcn/ui
+- **State:** Zustand + TanStack Query
+- **Forms:** React Hook Form + Zod
+- **i18n:** next-intl (ES/EN)
+- **Testing:** Jest + React Testing Library
+
+## ✨ Características
+
+- 🎨 Galería de plantillas con filtrado por categoría
+- 🌐 Multi-idioma (Español/Inglés)
+- 📱 Diseño responsive
+- 📝 Formulario de contacto con validación
+- ⚡ Performance optimizada (ISR, lazy loading, suspense)
+- ♿ Accesibilidad (ARIA labels, semantic HTML)
+
+## 🛠 Instalación y Ejecución
+
+### Prerequisitos
+
+- Node.js 18+
+- npm 9+
+
+### Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clonar el repositorio
+git clone <repository-url>
+cd invitly-front
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Comandos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Desarrollo
+npm run dev              # http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build
+npm run build
+npm run start
 
-## Learn More
+# Tests
+npm run test             # Ejecutar tests
+npm run test:watch       # Modo watch
+npm run test:coverage    # Con coverage
 
-To learn more about Next.js, take a look at the following resources:
+# Lint
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Estructura del Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+invitly-front/
+├── app/[locale]/          # Pages (Home, Templates, Contact)
+├── components/
+│   ├── features/         # Por feature (home, templates, contact)
+│   ├── shared/           # Reutilizables (Navbar, Footer)
+│   └── ui/               # shadcn/ui components
+├── hooks/                # useCategories, useTemplates
+├── services/             # API calls
+├── stores/               # Zustand stores
+├── utils/                # Types, validations, helpers
+├── messages/             # Traducciones (es/en)
+└── __tests__/            # Tests
+```
 
-## Deploy on Vercel
+## 📊 API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Método | Endpoint      | Descripción                 |
+| ------ | ------------- | --------------------------- |
+| GET    | `/categories` | Lista categorías            |
+| GET    | `/templates`  | Lista templates (filtrable) |
+| POST   | `/inquiries`  | Crea consulta               |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+**Desarrollado con Next.js 16 + TypeScript**
