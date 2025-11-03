@@ -1,5 +1,6 @@
 "use client";
 import { useCategories } from "@/hooks/useCategories";
+import { useURLParams } from "@/hooks/useURLParams";
 import { useCategoriesStore } from "@/stores/categoriesStore";
 import { Category } from "@/utils/types";
 import {
@@ -10,36 +11,20 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { X } from "lucide-react";
+import { useEffect } from "react";
 
 export function CategorySelect() {
   const t = useTranslations("Templates");
   const { data: categories } = useCategories();
+  const { updateParam, getParamValues } = useURLParams("categories");
 
   const addCategory = useCategoriesStore((state) => state.addCategory);
   const selectedCategories = useCategoriesStore(
     (state) => state.selectedCategories
   );
   const removeCategory = useCategoriesStore((state) => state.removeCategory);
-
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const updateURL = (categoryIds: string[]) => {
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (categoryIds.length > 0) {
-      params.set("categories", categoryIds.join(","));
-    } else {
-      params.delete("categories");
-    }
-
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-  };
 
   const handleAddCategory = (displayName: string) => {
     const catObj = categories?.find(
@@ -53,7 +38,7 @@ export function CategorySelect() {
         .map((c) => c.id)
         .filter((v, i, arr) => arr.indexOf(v) === i);
 
-      updateURL(newSelected);
+      updateParam(newSelected);
     }
   };
 
@@ -64,14 +49,14 @@ export function CategorySelect() {
       .filter((c) => c.id !== idCategory)
       .map((c) => c.id);
 
-    updateURL(newSelected);
+    updateParam(newSelected);
   };
 
+  // Sincronizar URL con store al cargar
   useEffect(() => {
     if (!categories) return;
 
-    const params = new URLSearchParams(searchParams.toString());
-    const ids = params.get("categories")?.split(",").filter(Boolean) || [];
+    const ids = getParamValues();
 
     ids.forEach((id) => {
       if (!selectedCategories.some((c) => c.id === id)) {

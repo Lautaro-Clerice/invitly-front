@@ -16,7 +16,7 @@ export const useCategoriesStore = create<CategoriesState>()(
     addCategory: (category) =>
       set((state) => {
         const exists = state.selectedCategories.some(
-          (c) => c.id === category.id
+          (c: Category) => c.id === category.id
         );
         if (!exists) {
           state.selectedCategories.push(category);
@@ -26,7 +26,7 @@ export const useCategoriesStore = create<CategoriesState>()(
     removeCategory: (idCategory: string) =>
       set((state) => {
         const index = state.selectedCategories.findIndex(
-          (c) => c.id === idCategory
+          (c: Category) => c.id === idCategory
         );
         if (index !== -1) {
           state.selectedCategories.splice(index, 1);
