@@ -18,7 +18,7 @@ import { useEffect } from "react";
 export function CategorySelect() {
   const t = useTranslations("Templates");
   const { data: categories } = useCategories();
-  const { updateParam, getParamValues } = useURLParams("categories");
+  const { paramValues, updateParam } = useURLParams("categories");
 
   const addCategory = useCategoriesStore((state) => state.addCategory);
   const selectedCategories = useCategoriesStore(
@@ -52,13 +52,10 @@ export function CategorySelect() {
     updateParam(newSelected);
   };
 
-  // Sincronizar URL con store al cargar
   useEffect(() => {
     if (!categories) return;
 
-    const ids = getParamValues();
-
-    ids.forEach((id) => {
+    paramValues.forEach((id) => {
       if (!selectedCategories.some((c) => c.id === id)) {
         const cat = categories.find((c: Category) => c.id === id);
         if (cat) addCategory(cat);

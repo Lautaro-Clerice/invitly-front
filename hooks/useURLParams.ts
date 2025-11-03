@@ -1,32 +1,27 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
 
 export function useURLParams(paramName: string) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const updateParam = useCallback(
-    (values: string[]) => {
-      const params = new URLSearchParams(searchParams.toString());
+  const paramValues =
+    searchParams.get(paramName)?.split(",").filter(Boolean) || [];
 
-      if (values.length > 0) {
-        params.set(paramName, values.join(","));
-      } else {
-        params.delete(paramName);
-      }
+  const updateParam = (values: string[]) => {
+    const params = new URLSearchParams(searchParams.toString());
 
-      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-    },
-    [pathname, router, searchParams, paramName]
-  );
+    if (values.length > 0) {
+      params.set(paramName, values.join(","));
+    } else {
+      params.delete(paramName);
+    }
 
-  const getParamValues = useCallback(() => {
-    return searchParams.get(paramName)?.split(",").filter(Boolean) || [];
-  }, [searchParams, paramName]);
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  };
 
   return {
+    paramValues,
     updateParam,
-    getParamValues,
   };
 }
