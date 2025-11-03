@@ -7,6 +7,8 @@ export function useCategories() {
     queryFn: () => {
       return getCategories();
     },
+    retry: 2,
+    staleTime: 1 * 60 * 1000,
   });
   return { data, isLoading, error };
 }
