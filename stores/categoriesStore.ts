@@ -1,5 +1,6 @@
 import { Category } from "@/utils/types";
 import { create } from "zustand";
+import { immer } from "zustand/middleware/immer";
 
 interface CategoriesState {
   selectedCategories: Category[];
@@ -7,24 +8,34 @@ interface CategoriesState {
   removeCategory: (idCategory: string) => void;
   resetCategories: () => void;
 }
-export const useCategoriesStore = create<CategoriesState>((set) => ({
-  selectedCategories: [],
 
-  addCategory: (category) =>
-    set((state) => ({
-      selectedCategories: state.selectedCategories.some(
-        (c) => c.id === category.id
-      )
-        ? state.selectedCategories
-        : [...state.selectedCategories, category],
-    })),
+export const useCategoriesStore = create<CategoriesState>()(
+  immer((set) => ({
+    selectedCategories: [],
 
-  removeCategory: (idCategory: string) =>
-    set((state) => ({
-      selectedCategories: state.selectedCategories.filter(
-        (c) => c.id !== idCategory
-      ),
-    })),
+    addCategory: (category) =>
+      set((state) => {
+        const exists = state.selectedCategories.some(
+          (c) => c.id === category.id
+        );
+        if (!exists) {
+          state.selectedCategories.push(category);
+        }
+      }),
 
-  resetCategories: () => set({ selectedCategories: [] }),
-}));
+    removeCategory: (idCategory: string) =>
+      set((state) => {
+        const index = state.selectedCategories.findIndex(
+          (c) => c.id === idCategory
+        );
+        if (index !== -1) {
+          state.selectedCategories.splice(index, 1);
+        }
+      }),
+
+    resetCategories: () =>
+      set((state) => {
+        state.selectedCategories = [];
+      }),
+  }))
+);
