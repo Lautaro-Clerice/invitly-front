@@ -44,6 +44,8 @@
       "messagePlaceholder": "Tell us about your event...",
       "submit": "Send message",
       "success": "Message sent!",
+      "error": "Error sending message",
+      "errorDescription": "Please try again later.",
       "successDescription": "We will contact you soon."
     }
   }

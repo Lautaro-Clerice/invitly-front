@@ -44,7 +44,9 @@
       "messagePlaceholder": "Cuéntanos sobre tu evento...",
       "submit": "Enviar mensaje",
       "success": "¡Mensaje enviado!",
-      "successDescription": "Nos pondremos en contacto contigo pronto."
+      "successDescription": "Nos pondremos en contacto contigo pronto.",
+      "error": "Error al enviar el mensaje",
+      "errorDescription": "Por favor, inténtalo de nuevo más tarde."
     }
   }
 }

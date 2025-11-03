@@ -46,7 +46,10 @@ export default function ContactForm() {
       });
       form.reset();
     } catch (error) {
-      console.log(error);
+      toast.error(t("form.error"), {
+        description: t("form.errorDescription"),
+        position: "top-right",
+      });
     }
   };
 
