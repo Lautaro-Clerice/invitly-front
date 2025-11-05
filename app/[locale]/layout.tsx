@@ -14,11 +14,9 @@ export const metadata = {
   description:
     "Crea invitaciones digitales personalizadas para cualquier evento. Elige tu categoría y sorprende a tus invitados con diseños exclusivos.",
 };
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
-
 export default async function RootLayout({
   children,
   params,
