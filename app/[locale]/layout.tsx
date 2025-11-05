@@ -7,8 +7,8 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
-import { WhatsAppButton } from "@/components/shared/whatsappButton";
 import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
+import ChatBot from "@/components/shared/ChatBot";
 
 export const metadata = {
   title: "Invitly - Invitaciones Digitales Personalizadas",
@@ -43,7 +43,7 @@ export default async function RootLayout({
             <Navbar />
             <main>{children}</main>
             <Footer />
-            <WhatsAppButton />
+            <ChatBot />
           </ReactQueryProvider>
         </NextIntlClientProvider>
       </body>
