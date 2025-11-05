@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/src/i18n/routing";
 import { Toaster } from "@/components/ui/sonner";
 import { WhatsAppButton } from "@/components/shared/whatsappButton";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 export const metadata = {
   title: "Invitly - Invitaciones Digitales Personalizadas",
@@ -35,6 +36,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className="antialiased">
+        <GoogleAnalytics />
         <NextIntlClientProvider messages={messages}>
           <ReactQueryProvider>
             <Toaster />

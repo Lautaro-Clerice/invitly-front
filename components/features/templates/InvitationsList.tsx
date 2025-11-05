@@ -91,7 +91,7 @@ export function InvitationsList() {
               {invitation.display_name}
             </h3>
             <p className="text-sm text-muted-foreground mb-3 truncate">
-              {invitation.category.display_name}
+              {invitation.category?.display_name}
             </p>
           </div>
         </div>
